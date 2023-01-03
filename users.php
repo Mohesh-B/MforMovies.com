@@ -118,10 +118,8 @@ $conn->close();
             <ul>
                 <li><img id="logo" src="logo (2).png"></li>
                 <LI><H3>MforMovies.com</H3></LI>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#About">About</a></li>
-                <li><a href="#">Browse</a></li>
-                <li><a href="#popup2">Register</a></li>
+                <li><a href="userindex.php">Home</a></li>
+                <li><a href="browse.php">Browse</a></li>
             </ul>
         </header>
     <div class="container req-box" >
@@ -145,12 +143,5 @@ $conn->close();
             </div>
         </div>
     </div>
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 </body>
 </html>
