@@ -51,9 +51,6 @@ if($result->num_rows > 0) {
     $list = "There is no account created yet";
 }
 
-// $_SESSION['list']= $list;
-// $_SESSION['total']= $total;
-
 
 $conn->close();
 
@@ -131,7 +128,7 @@ $conn->close();
         <form action="" method="post">
             <div class="row">
                 <div class="col-md-10 box1" style="margin-left:100px;">
-                    <h3 style="margin-bottom:50px;"><span style="font-weight:bold; color: #6AC045">Users List </span>(<?php echo $total ?>)</h3>
+                    <h3 style="margin-bottom:50px;"><span style="font-weight:bold; color: #6AC045">Movies List </span>(<?php echo $total ?>)</h3>
                     <?php 
                     echo $list;
                     ?>
