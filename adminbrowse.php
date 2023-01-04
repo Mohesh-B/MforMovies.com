@@ -41,8 +41,8 @@ if (isset($_POST["submit"]))
                     </p>
                 </div>
                 <div class="col-md-4 box5">
-                    <a href="deletemovie.php?id='.$row["movie_id"].'" class="btn btn-danger"> Delete</a>
-                    <a href="updatemovie.php?id='.$row["movie_id"].'" class="btn"> Update</a>
+                    <a href="deletemovie2.php?id='.$row["movie_id"].'" class="btn btn-danger"> Delete</a>
+                    <a href="updatemovies1.php?id='.$row["movie_id"].'" class="btn"> Update</a>
                 </div>
             </div>            ';
              }
@@ -77,7 +77,8 @@ if (isset($_POST["submit"]))
                     </p>
                 </div>
                 <div class="col-md-4 box5">
-                <a href="details.php?id='.$row["movie_id"].'" class="btn btn-danger"> More Details</a>
+                <a href="deletemovie2.php?id='.$row["movie_id"].'" class="btn btn-danger"> Delete</a>
+                <a href="updatemovies1.php?id='.$row["movie_id"].'" class="btn"> Update</a>
                 </div>
             </div>            ';
              }
@@ -112,8 +113,8 @@ if (isset($_POST["submit"]))
                     </p>
                 </div>
                 <div class="col-md-4 box5">
-                    <a href="deletemovie.php?id='.$row["movie_id"].'" class="btn btn-danger"> Delete</a>
-                    <a href="updatemovie.php?id='.$row["movie_id"].'" class="btn"> Update</a>
+                    <a href="deletemovie2.php?id='.$row["movie_id"].'" class="btn btn-danger"> Delete</a>
+                    <a href="updatemovies1.php?id='.$row["movie_id"].'" class="btn"> Update</a>
                 </div>
             </div>            ';
              }
@@ -148,8 +149,8 @@ if (isset($_POST["submit"]))
                     </p>
                 </div>
                 <div class="col-md-4 box5">
-                    <a href="deletemovie.php?id='.$row["movie_id"].'" class="btn btn-danger"> Delete</a>
-                    <a href="updatemovie.php?id='.$row["movie_id"].'" class="btn"> Update</a>
+                    <a href="deletemovie2.php?id='.$row["movie_id"].'" class="btn btn-danger"> Delete</a>
+                    <a href="updatemovies1.php?id='.$row["movie_id"].'" class="btn"> Update</a>
                 </div>
             </div>            ';
              }
@@ -184,8 +185,8 @@ if (isset($_POST["submit"]))
                     </p>
                 </div>
                 <div class="col-md-4 box5">
-                    <a href="deletemovie.php?id='.$row["movie_id"].'" class="btn btn-danger"> Delete</a>
-                    <a href="updatemovie.php?id='.$row["movie_id"].'" class="btn"> Update</a>
+                    <a href="deletemovie2.php?id='.$row["movie_id"].'" class="btn btn-danger"> Delete</a>
+                    <a href="updatemovies1.php?id='.$row["movie_id"].'" class="btn"> Update</a>
                 </div>
             </div>            ';
              }
@@ -220,8 +221,8 @@ if (isset($_POST["submit"]))
                     </p>
                 </div>
                 <div class="col-md-4 box5">
-                    <a href="deletemovie.php?id='.$row["movie_id"].'" class="btn btn-danger"> Delete</a>
-                    <a href="updatemovie.php?id='.$row["movie_id"].'" class="btn"> Update</a>
+                    <a href="deletemovie2.php?id='.$row["movie_id"].'" class="btn btn-danger"> Delete</a>
+                    <a href="updatemovies1.php?id='.$row["movie_id"].'" class="btn"> Update</a>
                 </div>
             </div>            ';
              }
@@ -256,8 +257,8 @@ if (isset($_POST["submit"]))
                     </p>
                 </div>
                 <div class="col-md-4 box5">
-                    <a href="deletemovie.php?id='.$row["movie_id"].'" class="btn btn-danger"> Delete</a>
-                    <a href="updatemovie.php?id='.$row["movie_id"].'" class="btn"> Update</a>
+                    <a href="deletemovie2.php?id='.$row["movie_id"].'" class="btn btn-danger"> Delete</a>
+                    <a href="updatemovies1.php?id='.$row["movie_id"].'" class="btn"> Update</a>
                 </div>
             </div>            ';
              }
@@ -293,8 +294,8 @@ if (isset($_POST["submit"]))
                     </p>
                 </div>
                 <div class="col-md-4 box5">
-                    <a href="deletemovie.php?id='.$row["movie_id"].'" class="btn btn-danger"> Delete</a>
-                    <a href="updatemovie.php?id='.$row["movie_id"].'" class="btn"> Update</a>
+                    <a href="deletemovie2.php?id='.$row["movie_id"].'" class="btn btn-danger"> Delete</a>
+                    <a href="updatemovies1.php?id='.$row["movie_id"].'" class="btn"> Update</a>
                 </div>
             </div>            ';
              }
@@ -332,8 +333,8 @@ if($result->num_rows > 0) {
             </p>
         </div>
         <div class="col-md-4 box5">
-            <a href="deletemovie.php?id='.$row["movie_id"].'" class="btn btn-danger"> Delete</a>
-            <a href="updatemovie.php?id='.$row["movie_id"].'" class="btn"> Update</a>
+            <a href="deletemovie2.php?id='.$row["movie_id"].'" class="btn btn-danger"> Delete</a>
+            <a href="updatemovies1.php?id='.$row["movie_id"].'" class="btn"> Update</a>
         </div>
     </div>            
         ';
@@ -450,13 +451,6 @@ $conn->close();
         </form>
     </div>
    
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 </body>
 </html>
 

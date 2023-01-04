@@ -58,7 +58,7 @@ if (isset($_POST['update'])) {
                 {
                     if($result3)
                     {
-                        header('location: updatemoviespage.php');  
+                        header('location: adminbrowse.php');  
                     }
                     else{
                         echo "<script>";
