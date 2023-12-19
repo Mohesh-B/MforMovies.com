@@ -1,0 +1,245 @@
+create database moviedb;
+use moviedb;
+
+PRODUCTION HOUSE:
+
+create table production_house(prod_id char(30) not null primary key,prod_name char not null,date_of_estd date,networth integer(50),prod_rating integer(10),ceo char(30));
+
+insert into production_house values('p1','Dune entertainment','1978-03-12',234450000000,8,'Brett ratnar');
+insert into production_house values('p2','Thirupathi brothers','2001-01-25',8900000000,6,'N.Lingusamy');
+insert into production_house values('p3','Marvel studios','1999-09-25',120000000000,8,'Kevin feige');
+insert into production_house values('p4','Paramount pictures','2005-03-27',98000000000,7,'James cameron');
+insert into production_house values('p5','Heyday films','2003-03-22',670000000000,8,'David Heyman');
+insert into production_house values('p6','Reliance studios','1987-02-23',7900000000,7,'Anil Ambani');
+insert into production_house values('p7','Kyta productions','1992-09-10',16700000000,7,'Dheeraj Wadhawan');
+insert into production_house values('p8','Excel entertainment','2004-01-14',8000000000,6,'Farhan Akhtar');
+insert into production_house values('p9','Dharma Productions','1990-11-15',6200000000,8,'Karan Johar');
+
+insert into production_house values('p10','2DEntertainment','2013-10-22',600000000,8,'Suriya');
+insert into production_house values('p11','Lyca Productions','2014-01-12',890000000,8,'Subaskaran');
+insert into production_house values('p12','Sujathfilms','1989-09-16',1880000000,7,'Venkateshan');
+insert into production_house values('p13','SriThenandalFilms','1979-08-05',6000000,6,'RamNarayanan');
+insert into production_house values('p14','24amstudios','2015-10-08',8900000,6,'Ramarajan');
+insert into production_house values('p15','GA2 pictures','1972-09-15',90000000,7,'AlluAravind');
+insert into production_house values('p16','DVV Entertainment','1992-11-09',84000000,5,'BarathAneNene');
+insert into production_house values('p17','AnwarRasheedEntertainments','2012-10-28',80000000,7,'AnwarRasheed');
+insert into production_house values('p18','Manjilas','2000-12-19',33000000,8,'Barathwaj');
+insert into production_house values('p19','Hombalefilms','2012-05-12',890000000,8,'VijayKirangandur');
+insert into production_house values('p20','Lyca Productions','2014-01-12',890000000,8,'Subaskaran');
+
+
+EXPENSES:
+
+create table expenses(movie_id integer not null,prod_id char(30) not null,total_expense integer(255) not null,promo_cost integer(255) not null,
+expense_id integer(10) not null primary key);
+
+insert into expenses values(111,'p1',9080095000,675400000,843);
+insert into expenses values(131,'p3',87300006000,98000000,841);
+insert into expenses values(145,'p4',124800000,3400000,833);
+insert into expenses values(120,'p3',80095000000,21890000,801);
+insert into expenses values(177,'p5',762000000,11230000,829);
+insert into expenses values(155,'p6',92300000,5600000,807);
+insert into expenses values(193,'p7',450095000,5600000,834);
+insert into expenses values(151,'p7',2310095000,7100000,811);
+insert into expenses values(171,'p8',93095000,4020000,845);
+insert into expenses values(105,'p9',95100000,8900000,827);
+
+insert into expenses values(156,p10,763100000000,750000,856);
+insert into expenses values(160,p11,62400000000,3340000,875);
+insert into expenses values(187,p12,763100000000,769280000,886);
+insert into expenses values(159,p13,9830000000,25200000,865);
+insert into expenses values(168,p14,2563100000000,664260000,874);
+insert into expenses values(178,p15,7600000000,763600000,897);
+insert into expenses values(165,p16,1570000000,4830000,866);
+insert into expenses values(190,p17,590900000000,80600000,859);
+insert into expenses values(156,p18,79300000000,87600000,878);
+insert into expenses values(169,p19,700000000,25600000,855);
+insert into expenses values(176,p20,2670000000,27500000,877);
+insert into expenses values(188,p11,850000000,1900000,862);
+
+
+
+COLLECTION:
+
+ create table collections(collection_id integer(10) not null primary key,movie_id integer not null,prod_id integer not null,ott integer(255) not null,
+theatre integer(255) not null,overseas integer(255),total_collection integer(255) not null);
+
+insert into collections values(431,111,'p1',3495000,6754000,7800000,6500000000);
+insert into collections values(403,131,'p3',8730000,9800000,67800000,4512000000);
+insert into collections values(445,145,'p4',4248000,5600000,7890000,8900000000);
+insert into collections values(420,120,'p3',8009500,2189000,7600100,3210000000);
+insert into collections values(433,177,'p5',7620000,8123000,56082900,4560012000);
+insert into collections values(417,155,'p6',923000,560000,780000,341000000);
+insert into collections values(445,193,'p7',4502000,560000,2310000,679000000);
+insert into collections values(413,151,'p7',2310000,3410000,540000,130000000);
+insert into collections values(422,171,'p8',9309500,402000,3120000,25400000000);
+insert into collections values(447,105,'p9',9100000,12000,689000,2630000000);
+
+insert into collections values(488,156,p10,38762000000,290660000,26450000,7800000000000);
+insert into collections values(472,160,p11,436000000,254600000,52870000,7623892000000);
+insert into collections values(498,187,p12,342000000,8920000,17640000,277700000000);
+insert into collections values(467,159,p13,993000000,136470000,465260000,9818700000000);
+insert into collections values(477,168,p14,2472000000,75420000,2840000,7284900000000);
+insert into collections values(465,178,p15,2987000000,198300000,4270000,2786400000000);
+insert into collections values(455,165,p16,89500000,41388000,8840000,1837800000000);
+insert into collections values(485,190,p17,263000000,196250000,52460000,927300000000);
+insert into collections values(487,156,p18,187400000,828760000,287320000,98237000000000);
+insert into collections values(469,169,p19,178000000,78460000,522360000,2454000000000);
+insert into collections values(491,176,p20,187500000,582000000,90290000,5277600000000);
+insert into collections values(463,188,p21,93400000,5363700000,237660000,8938000000000);
+
+
+
+Movie:
+
+create table movies(movie_id integer(20) primary key not null,movie_name char(100) not null,genre char(30) not null,industry char(100) not null,date_of_release date,
+prod_id char(30) not null,director_id integer not null,actor_id integer(10),music_dir_id integer(20));
+
+insert into movies values(111,'Avatar-2','Science fiction','Hollywood','p1',321,211,521,'2022-12-22');
+insert into movies values(131,'Avengers-Infinity war','Action','Hollywood','p3',345,223,501,'2018-04-27');
+insert into movies values(145,'Titanic','Romantic','Hollywood','p4',321,243,532,'1997-12-19');
+insert into movies values(120,'Spider-man','Super hero','Hollywood','p3',332,221,545,'2021-12-27');
+insert into movies values(177,'Harry potter and globlet of fire','Fantasy','Hollywood','p5',301,203,547,'2005-03-07');
+insert into movies values(155,'83','Sports','Bollywood','p6',341,246,525,'2021-12-24');
+insert into movies values(193,'Romeo Akbar Walter','Super hero','Bollywood','p7',302,207,539,'2019-04-05');
+insert into movies values(151,'Bachchan','comedy thriller','Bollywood','p7',341,212,517,'2014-08-19');
+insert into movies values(171,'Luck by Chance','Drama film','Bollywood','p8',319,228,507,'2009-05-18');
+insert into movies values(105,'Brahmastra','Love','Bollywood','p9',309,250,525,'2022-09-16');
+
+insert into movies values(156,'Soorarai Potru','Action drama','Kollywood','p10',354,205,559,'2020-11-12');
+insert into movies values(160'PonniyinSelvan-1','Thriller','Kollywood','p11'388,259,578,'2022-09-30');
+insert into movies values(187'Anjaan','Anjaan','Kollywood','p2'359,205,567,'2004-08-15');
+insert into movies values(159,'Mounaragam','Romantic','Kollywood','p12',372,227,572,'1986-08-15');
+insert into movies values(168,'Kanchana','Horror comedy ','Kollywood','p13',386,214,589,'2011-07-15');
+insert into movies values(178,'Remo','Comedy ','Kollywood','p14',366,295,563,'2016-10-07');
+insert into movies values(165,'Taxiwaala','Comedy thriller','Tollywood','p15',367,234,588,'2018-11-17');
+insert into movies values(190,'RRR','Action drama','Tollywood','p16',390,230,554,'2011-07-15');
+insert into movies values(156,'Premam','Romance','Mollywood','p17',377,247,560,'2022-03-24');
+insert into movies values(169,'Yakshi','Horror','Mollywood','p18',374,239,570,'1968-06-13');
+insert into movies values(176,'K.G.F','Action','Sandalwood','p19',371,299,579,'2018-12-20');
+insert into movies values(188,'Dia','Romantic','Sandalwood','p20',382,255,565,'2020-02-07');
+
+
+Actor:
+
+create table actor(actor_id integer(10) not null primary key,actor_name char(50) not null,salary integer(50) not null,actor_rating integer not null);
+
+insert into actor values(211,'Sam worthington',4500000000,8);
+insert into actor values(223,'Robert downey',870000000,7);
+insert into actor values(243,'Leonardo dicaprio',432100000,8);
+insert into actor values(221,'Peter parker',12110000,8);
+insert into actor values(203,'Daniel Jacob Radcliffe',67000000,7);
+insert into actor values(246,'Ranveer singh',89000000,8);
+insert into actor values(207,'John abraham',7200000,6);
+insert into actor values(212,'Amitabh Bachchan',560000000,8);
+insert into actor values(228,'Farhan Akhtar',32100000,7);
+insert into actor values(250,'Ranbir kapoor',7800000,7);
+
+insert into actor values(205,'Suriya',6500000,8);
+insert into actor values(259,'Vikram',900000,9);
+insert into actor values(205,'Suriya',6500000,8);
+insert into actor values(127,'Karthick',5600000,8);
+insert into actor values(214,'Ragava Lawrence',2900000,7);
+insert into actor values(295,'SivaKarthikeyan',2500000,7);
+insert into actor values(234,'VijayDevarKonda',3500000,8);
+insert into actor values(230,'Ramcharan',5400000,7);
+insert into actor values(247,'Nivin Pauly',2800000,7);
+insert into actor values(239,'Sathyan',560000,6);
+insert into actor values(299,'Yashwanth',7800000,8);
+insert into actor values(255,'Pruthvi Nambaar',6700000,7);
+
+
+
+director 
+
+create table director(director_id integer not null primary key,director_name char(100) not null,director_rating integer,gender char,no_of_movies integer,
+salary integer(30));
+
+insert into director values(321,'James cameron',9,'Male',24,3400000000);
+insert into director values(345,'Antony russo',9,'Male',18,870000000);
+insert into director values(332,'Jon Watts',8,'Male',12,780000000);
+insert into director values(301,'David yates',8,'Male',9,730000000);
+insert into director values(341,'Kabir Khan',7,'Male',183000000);
+insert into director values(302,'Robby grewal',6,'Male',8,90000000);
+insert into director values(341,'Raja chandra',7,'Male',24,3100000000);
+insert into director values(319,'Zoya Akhtar',6,'Female',5,280000000);
+insert into director values(309,'Ayan Mukerji',8,'Male',17,2300000000);
+
+insert into director movies(354,'Sudha Kongara',8,Female,52000000);
+insert into director movies(388,'Maniratnam',9,Male,400000000);
+insert into director movies(359,'Lingusamy',6,Male,1000000);
+insert into director movies(372,'Maniratnam',9,Male,400000000);
+insert into director movies(386,'Ragava Lawrence',5,Male,1000000);
+insert into director movies(366,'BakkiyarajKannan',6,Male,2000000);
+insert into director movies(367,'RahulSankrityan',7,Male,30000000);
+insert into director movies(390,'S.S.Rajamouli',9,Male,5000000000);
+insert into director movies(377,'Alphonse Puthren',7,Male,2900000);
+insert into director movies(374,'Sethumadhavan',6,Male,35000000);
+insert into director movies(371,'Prasanth Neel',8,Male,670000000);
+insert into director movies(382,'K.S.Ashok',7,Male,4500000000);
+
+
+
+MUSIC_dir
+
+create table music_director(music_dir_id integer not null primary key,md_name char(100),salary integer(100),md_rating integer);
+
+insert into music_director values(521,'James harner',39000000,8);
+insert into music_director values(501,'Alean silvestry',98000000,7);
+insert into music_director values(532,'James Horner',1200000,6);
+insert into music_director values(545,'Michael Giacchino',9000000,7);
+insert into music_director values(547,'John Williams',4500000,8);
+insert into music_director values(525,'Pritam',72000000,6);
+insert into music_director values(539,'Amar Mohile',54000000,8);
+insert into music_director values(517,'R.Balki',25000000,7);
+insert into music_director values(507,'Shankar',89000000,6);
+
+insert into music_director values(559,'G.V.PrakashKumar',5200000,7);
+insert into music_director values(578,'A.R.Rahman',200000000,9);
+insert into music_director values(567,'HarrisJayaraj',4500000,7);
+insert into music_director values(572,'Illaiyaraja',40000000,9);
+insert into music_director values(589,'Thaman',2500000,6);
+insert into music_director values(567,'Anirudh',560000,8);
+insert into music_director values(588,'Jakes Bejoy',340000,7);
+insert into music_director values(554,'M.M.Keeravani',2300000,8);
+insert into music_director values(560,'Rajesh',3300000,7);
+insert into music_director values(570,'Devarajan',5800000,8);
+insert into music_director values(579,'Ravi',4000000,6);
+insert into music_director values(565,'Sam',2900000,7);
+
+
+
+ratings:
+
+create table ratings(rating_id integer not null primary key auto_increment,director_rating integer(100),actor_rating integer(100),md_rating integer(100),
+prod_house_rating integer,movie_rating integer);
+
+insert into ratings values(711,8,7,6,7,8);
+insert into ratings values(721,7,7,8,6,7);
+insert into ratings values(702,6,5,8,7,7);
+insert into ratings values(734,7,8,9,7,6);
+insert into ratings values(745,6,7,8,9,7);
+insert into ratings values(745,8,6,6,7,8);
+insert into ratings values(707,6,8,9,7,7);
+insert into ratings values(717,8,8,6,7,7);
+insert into ratings values(735,7,6,8,8,7);
+insert into ratings values(712,6,7,7,8,6);
+
+
+insert into ratings values(789,8,9,8,7,7);
+insert into ratings values(756,7,6,8,7,9);
+insert into ratings values(777,6,8,7,8,9);
+insert into ratings values(790,6,8,6,9,6);
+insert into ratings values(754,5,6,7,8,9);
+insert into ratings values(798,9,6,9,6,5);
+insert into ratings values(788,6,9,8,6,8);
+insert into ratings values(757,7,6,5,5,9);
+insert into ratings values(765,6,7,8,9,6);
+insert into ratings values(787,9,5,8,7,6);
+insert into ratings values(767,8,9,8,7,7);
+
+
+
+
+
+
